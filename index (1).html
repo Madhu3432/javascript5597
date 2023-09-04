@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shopping</title> 
+        <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="icon" href="../public/favicon.ico">
+        <script>
+            var categories = ["Select a Category", "Electronics", "Footwear", "Fashion"];
+            var electronics = ["Select Electronic Product","Samsung Mobile", "boAt NeckBand"];
+            var footwear = ["Select Footwear", "Nike Casuals", "Lee Cooper Boot"];
+            var fashion = ["Select Fashion", "Backpack", "Mens Cotton Jacket"];
+            var products = [];
+
+            var data = [
+                {Name: 'Samsung Mobile', Price: 13000.44, Photo: '../public/samsang.jpg'},
+                {Name: 'boAt NeckBand', Price: 4000.44, Photo: '../public/boat.png'},
+                {Name: 'Nike Casuals', Price: 6000.44, Photo: '../public/images/shoe.jpg'},
+                {Name: 'Lee Cooper Boot', Price: 3000.44, Photo: '../public/images/shoe1.jpg'},
+                {Name: 'Backpack', Price: 2000.44, Photo: '../public/images/backpack.jpg'},
+                {Name: 'Mens Cotton Jacket', Price: 1200.44, Photo: '../public/images/jacket.jpg'},
+            ];
+
+            function LoadProducts(){
+                document.getElementById("lstProducts").innerHTML ="";
+                for(var item of products)
+                {
+                    var option = document.createElement("option");
+                    option.text = item;
+                    option.value = item;
+                    document.getElementById("lstProducts").appendChild(option);
+                }
+            }
+
+            function bodyload(){
+                for(var item of categories)
+                {
+                    var option = document.createElement("option");
+                    option.value = item;
+                    option.text = item;
+                    document.getElementById("lstCategories").appendChild(option);
+                }
+                GetCartItemsCount();
+            }
+            function CategoryChanged(){
+                var categoryName = document.getElementById("lstCategories").value;
+                switch(categoryName)
+                {
+                    case "Electronics":
+                    products = electronics;
+                    LoadProducts();
+                    break;
+                    case "Footwear":
+                    products = footwear;
+                    LoadProducts();
+                    break;
+                    case "Fashion":
+                    products = fashion;
+                    LoadProducts();
+                    break;
+                    default:
+                    products = ["Please Select a Category"];
+                    LoadProducts();
+                    break;
+                }
+            }
+            var searchedProduct = {};
+            function ProductChanged(){
+                var productName = document.getElementById("lstProducts").value;
+                searchedProduct = data.find(function(product){
+                    return product.Name=productName;
+                });
+                document.getElementById("lblName").innerHTML = searchedProduct.Name;
+                document.getElementById("lblPrice").innerHTML = searchedProduct.Price;
+                document.getElementById("imgProduct").src = searchedProduct.Photo;
+            }
+            var cartItems = [];
+
+           
+            function GetCartItemsCount(){
+                document.getElementById("lblCart").innerHTML = cartItems.length;
+            }
+
+            function AddToCartClick(){
+                cartItems.push(searchedProduct);
+                alert(`${searchedProduct.Name} Added to Cart`);
+                GetCartItemsCount();
+            }
+            function LoadCartItems(){
+                document.querySelector("tbody").innerHTML="";
+                for(var item of cartItems)
+                {
+                    var tr = document.createElement("tr");
+                    var tdName = document.createElement("td");
+                    var tdPrice = document.createElement("td");
+                    var tdPhoto = document.createElement("td");
+                    var tdRemove = document.createElement("td");
+
+                    tdName.innerHTML = item.Name;
+                    tdPrice.innerHTML = item.Price;
+
+                    var img = document.createElement("img");
+                    img.height= "50";
+                    img.width="50";
+                    img.src=item.Photo;
+
+                    tdPhoto.appendChild(img);
+
+                    tdRemove.innerHTML = `
+                      <button class="btn btn-outline-danger"> <span class="bi bi-trash-fill"></span> </button>
+                    `;
+
+                    tr.appendChild(tdName);
+                    tr.appendChild(tdPrice);
+                    tr.appendChild(tdPhoto);
+                    tr.appendChild(tdRemove);
+
+                    document.querySelector("tbody").appendChild(tr);
+                }
+            }
+           
+        </script>
+    </head>
+    <body class="container-fluid" onload="bodyload()">
+        <header class="bg-danger text-center text-white p-2">
+            <h1> <span class="bi bi-cart3"></span> MADHU Shopping Mart</h1>
+        </header>
+        <div class="row mt-2">  
+            <div class="col-3">
+              <div class="mt-2">
+                 <label class="form-label">Select a Category</label>
+                 <div>
+                     <select onchange="CategoryChanged()" class="form-select" id="lstCategories">
+
+                     </select>
+                 </div>
+              </div>
+              <div class="mt-2">
+                 <label class="form-label">Select a Product</label>
+                 <div>
+                     <select onchange="ProductChanged()" class="form-select" id="lstProducts">
+
+                     </select>
+                 </div>
+              </div>
+              <div class="mt-2">
+                 <label class="form-label">Preview</label>
+                 <div class="card">
+                    <div class="card-header  text-center">
+                        <h2 id="lblName"></h2>
+                    </div>
+                    <div class="card-body text-center">
+                        <img id="imgProduct" width="200" height="200">
+                        <p id="lblPrice"></p>
+                    </div>
+                    <div class="card-footer">
+                        <button onclick="AddToCartClick()" class="btn btn-danger w-100">
+                            <span class="bi bi-cart4"></span>
+                            Add to Cart
+                        </button>
+                    </div>
+                 </div>
+              </div>
+            </div>
+            <div class="col-7">
+
+            </div>
+            <div class="col-2">
+              <div class="mt-2">
+                 <button onclick="LoadCartItems()" class="btn btn-warning w-100" data-bs-target="#cart" data-bs-toggle="modal" >
+                     <span class="bi bi-cart2"></span>
+                     [<label id="lblCart"></label>]
+                      Your Cart Items
+                 </button>
+                 <div class="modal fade" id="cart">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>Your Cart Items</h3>
+                                <button class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Price</th>
+                                            <th>Preview</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+              </div>
+            </div>
+        </div>
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
+</html>
