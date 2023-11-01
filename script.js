@@ -1,17 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const addTaskButton = document.getElementById("addTask");
-    const taskInput = document.getElementById("task");
-    const taskList = document.getElementById("taskList");
+    const loginForm = document.getElementById("login-form");
+    const errorMessage = document.getElementById("error-message");
 
-    addTaskButton.addEventListener("click", function () {
-        const taskText = taskInput.value;
-        if (taskText.trim() !== "") {
-            const listItem = document.createElement("li");
-            listItem.textContent = taskText;
-            taskList.appendChild(listItem);
-            taskInput.value = "";
+    loginForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+
+        if (username === "your_username" && password === "your_password") {
+
+            window.location.href = "welcome.html";
+        } else {
+
+            errorMessage.textContent = "Invalid username or password.";
         }
     });
 });
-
-
