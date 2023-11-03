@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Slider</title>
+    <style>
+        #slider {
+            width: 400px;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        #slider img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slider">
+        <img src="10.jpg" alt="Image 1">
+    </div>
+    <button onclick="nextImage()">Next</button>
+    <button onclick="prevImage()">Previous</button>
+    <script>
+        const images = ["10.jpg", "1152932.jpg", "12.jpg"];
+        let currentIndex = 0;
+        const slider = document.getElementById("slider");
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            slider.innerHTML = `<img src="${images[currentIndex]}" alt="Image ${currentIndex + 1}">`;
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            slider.innerHTML = `<img src="${images[currentIndex]}" alt="Image ${currentIndex + 1}">`;
+        }
+    </script>
+</body>
+
+</html>

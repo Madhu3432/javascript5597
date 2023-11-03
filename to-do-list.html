@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>To-Do List</title>
+</head>
+
+<body>
+    <h2>To-Do List</h2>
+    <ul id="todoList"></ul>
+    <input id="newTask" type="text" placeholder="New task">
+    <button onclick="addTask()">Add</button>
+    <script>
+        function addTask() {
+            const taskText = document.getElementById("newTask").value;
+            const taskList = document.getElementById("todoList");
+            const taskItem = document.createElement("li");
+            taskItem.textContent = taskText;
+            taskList.appendChild(taskItem);
+            document.getElementById("newTask").value = "";
+        }
+    </script>
+</body>
+
+</html>
