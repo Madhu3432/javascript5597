@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Gallery</title>
+    <style>
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+        }
+
+        .image-item {
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        .image-item img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Image Gallery</h1>
+    <div class="image-grid">
+        <div class="image-item"><img src="111.jpg" alt="Image 1"></div>
+        <div class="image-item"><img src="1111.jpg" alt="Image 2"></div>
+        <div class="image-item"><img src="11111.jpg" alt="Image 3"></div>
+    </div>
+</body>
+
+</html>
