@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Countdown Timer</title>
+    <style>
+        #timer {
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Countdown Timer</h1>
+    <div id="timer">10:00</div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        var timerDisplay = document.getElementById("timer");
+        var countdown;
+        document.getElementById("start").addEventListener("click", function () {
+            var seconds = 600; // 10 minutes
+            startTimer(seconds);
+        });
+
+        document.getElementById("stop").addEventListener("click", function () {
+            clearInterval(countdown);
+        });
+
+        function startTimer(duration) {
+            var start = Date.now(),
+                diff,
+                minutes,
+                seconds;
+            countdown = setInterval(function () {
+                diff = duration - (((Date.now() - start) / 1000) | 0);
+
+                minutes = (diff / 60) | 0;
+                seconds = (diff % 60) | 0;
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                timerDisplay.textContent = minutes + ":" + seconds;
+
+                if (diff <= 0) {
+                    clearInterval(countdown);
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>
