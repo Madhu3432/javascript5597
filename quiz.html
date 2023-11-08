@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Interactive Quiz</title>
+    <style>
+        .question {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Interactive Quiz</h1>
+    <div id="quiz">
+        <div class="question">What is the capital of France?</div>
+        <input type="radio" name="q1" value="paris"> Paris<br>
+        <input type="radio" name="q1" value="london"> London<br>
+        <input type="radio" name="q1" value="berlin"> Berlin<br>
+        <br>
+        <button id="checkAnswer">Check Answer</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        document.getElementById("checkAnswer").addEventListener("click", function () {
+            var selectedAnswer = document.querySelector('input[name="q1"]:checked');
+            if (selectedAnswer) {
+                if (selectedAnswer.value === "paris") {
+                    document.getElementById("result").textContent = "Correct!";
+                } else {
+                    document.getElementById("result").textContent = "Incorrect. The correct answer is Paris.";
+                }
+            } else {
+                document.getElementById("result").textContent = "Please select an answer.";
+            }
+        });
+    </script>
+</body>
+
+</html>

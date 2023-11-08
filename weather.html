@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather App</title>
+</head>
+
+<body>
+    <h1>Weather App</h1>
+    <input type="text" id="location" placeholder="Enter Location">
+    <button id="getWeather">Get Weather</button>
+    <div id="weatherInfo"></div>
+
+    <script>
+        document.getElementById("getWeather").addEventListener("click", function () {
+            var location = document.getElementById("location").value;
+            var weatherInfo = document.getElementById("weatherInfo");
+            // Use an API to fetch weather information based on the location
+            // Display the weather information in the weatherInfo element
+        });
+    </script>
+</body>
+
+</html>
