@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Array Mapping</title>
+</head>
+
+<body>
+    <script>
+        var temperaturesCelsius = [0, 25, 10, -5, 15];
+
+        var temperaturesFahrenheit = temperaturesCelsius.map(function (celsius) {
+            return (celsius * 9 / 5) + 32;
+        });
+        console.log(temperaturesFahrenheit); 
+    </script>
+</body>
+
+</html>
