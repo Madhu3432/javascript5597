@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Data Types</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        #output {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Number Data Types in JavaScript</h1>
+    <div id="output"></div>
+
+    <script>
+
+        const integerNumber = 42;
+        const floatingPointNumber = 3.14;
+        const scientificNotation = 5e3;
+        const binaryNumber = 0b1010;
+        const octalNumber = 0o12;
+        const hexadecimalNumber = 0x1A;
+        const infinityValue = Infinity;
+        const negativeInfinityValue = -Infinity;
+        const notANumber = NaN;
+
+
+        const output = `
+      Integer Number: ${integerNumber}
+      Floating-point Number: ${floatingPointNumber}
+      Scientific Notation: ${scientificNotation}
+      Binary Number: ${binaryNumber}
+      Octal Number: ${octalNumber}
+      Hexadecimal Number: ${hexadecimalNumber}
+      Infinity Value: ${infinityValue}
+      Negative Infinity Value: ${negativeInfinityValue}
+      Not a Number: ${notANumber}
+    `;
+
+        document.getElementById('output').innerText = output;
+    </script>
+</body>
+
+</html>

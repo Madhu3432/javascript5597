@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Numbers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        #output {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Prime Numbers Less Than 20</h1>
+    <div id="output"></div>
+
+    <script>
+        function isPrime(num) {
+            if (num < 2) return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function printPrimes() {
+            let primes = [];
+            for (let i = 2; i < 20; i++) {
+                if (isPrime(i)) {
+                    primes.push(i);
+                }
+            }
+            return primes.join(', ');
+        }
+
+        document.getElementById('output').innerText = `Prime Numbers: ${printPrimes()}`;
+    </script>
+</body>
+
+</html>

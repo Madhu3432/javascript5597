@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        #output {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>String Operations in JavaScript</h1>
+    <script>
+
+        const string1 = "Hello, ";
+
+
+        const string2 = "World!";
+        const concatenatedString = string1 + string2;
+
+
+        console.log("Concatenated String:", concatenatedString);
+
+
+        const substring = concatenatedString.substring(7, 12);
+
+
+        const output = `
+      Original String 1: ${string1}
+      Original String 2: ${string2}
+      Concatenated String: ${concatenatedString}
+      Substring: ${substring}
+    `;
+
+        console.log(output);
+
+
+        const outputElement = document.createElement('div');
+        outputElement.id = 'output';
+        outputElement.innerHTML = output;
+        document.body.appendChild(outputElement);
+    </script>
+</body>
+
+</html>
