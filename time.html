@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        #list-container {
+            margin-top: 20px;
+        }
+
+        #output {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>List Operations in JavaScript</h1>
+    <div id="list-container">
+        <label for="itemInput">Enter item:</label>
+        <input type="text" id="itemInput">
+        <button onclick="addItem()">Add Item</button>
+        <ul id="itemList"></ul>
+        <button onclick="removeItem()">Remove Last Item</button>
+    </div>
+    <div id="output"></div>
+
+    <script>
+        function addItem() {
+            const itemInput = document.getElementById('itemInput').value;
+            if (itemInput.trim() === '') {
+                alert('Please enter a valid item.');
+                return;
+            }
+
+            const itemList = document.getElementById('itemList');
+            const listItem = document.createElement('li');
+            listItem.textContent = itemInput;
+            itemList.appendChild(listItem);
+
+            document.getElementById('itemInput').value = '';
+            updateOutput();
+        }
+
+        function removeItem() {
+            const itemList = document.getElementById('itemList');
+            const lastItem = itemList.lastElementChild;
+
+            if (lastItem) {
+                itemList.removeChild(lastItem);
+                updateOutput();
+            } else {
+                alert('The list is already empty.');
+            }
+        }
+
+        function updateOutput() {
+            const itemList = document.getElementById('itemList');
+            const listItems = itemList.getElementsByTagName('li');
+            const output = `Number of items: ${listItems.length}`;
+
+            document.getElementById('output').innerText = output;
+        }
+    </script>
+</body>
+
+</html>

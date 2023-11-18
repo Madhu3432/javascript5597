@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuple Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        #output {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tuple Operations in JavaScript</h1>
+    <div id="output"></div>
+
+    <script>
+        // Creating a "tuple" using an array
+        const myTuple = [42, "Hello", true];
+
+        // Accessing elements in the "tuple"
+        const firstElement = myTuple[0];
+        const secondElement = myTuple[1];
+        const thirdElement = myTuple[2];
+
+        // Display Output
+        const output = `
+      Original Tuple: ${JSON.stringify(myTuple)}
+      First Element: ${firstElement}
+      Second Element: ${secondElement}
+      Third Element: ${thirdElement}
+    `;
+
+        // Print the output to the console
+        console.log(output);
+
+        // Display the output in the HTML document
+        const outputElement = document.createElement('div');
+        outputElement.id = 'output';
+        outputElement.innerHTML = output;
+        document.body.appendChild(outputElement);
+    </script>
+</body>
+
+</html>
