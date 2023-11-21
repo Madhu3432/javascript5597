@@ -1,0 +1,6 @@
+// Using a for loop with an if statement
+for (let i = 1; i <= 10; i++) {
+    if (i % 2 === 0) {
+        console.log(i);
+    }
+}
