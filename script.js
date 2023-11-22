@@ -1,17 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const addTaskButton = document.getElementById("addTask");
-    const taskInput = document.getElementById("task");
-    const taskList = document.getElementById("taskList");
+function signIn() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
 
-    addTaskButton.addEventListener("click", function () {
-        const taskText = taskInput.value;
-        if (taskText.trim() !== "") {
-            const listItem = document.createElement("li");
-            listItem.textContent = taskText;
-            taskList.appendChild(listItem);
-            taskInput.value = "";
-        }
-    });
-});
-
-
+    if (username === "Madhu" && password === "Madhu@123") {
+        alert("Login Successful");
+        window.location.assign("index1.html");
+    } else {
+        alert("Invalid username or password");
+    }
+}

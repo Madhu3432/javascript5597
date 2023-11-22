@@ -1,0 +1,158 @@
+body,
+h1,
+h2,
+ul,
+li,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    background-image: url('HANUMAN.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    /* background-color: #8f1717; */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(151, 245, 151, 0.662);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.header h1 {
+    color: rgb(167, 176, 180);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+.menu {
+    margin-top: 20px;
+}
+
+.menu ul {
+    list-style-type: none;
+}
+
+.menu ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #e91616;
+    font-weight: bold;
+}
+
+.divider {
+    margin: 20px 0;
+    border: 1px solid #ccc;
+}
+
+.content h2 {
+    color: #f4aeae;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid-item {
+    background-color: #de3333;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.breadcrumb {
+    margin: 20px 0;
+    color: #14dc85;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.dropbtn {
+    background-color: #0b80f4;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(237, 10, 10, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.pagination {
+    margin: 20px 0;
+}
+
+.pagination a {
+    color: #007bff;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: #007bff;
+    color: #f8e3e3;
+}
+
+.steps {
+    display: flex;
+    margin-top: 20px;
+}
+
+.step {
+    flex: 1;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-right: 10px;
+}
