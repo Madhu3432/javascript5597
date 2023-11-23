@@ -1,32 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+// Define a constructor function for creating Person objects
+function Person(firstName, lastName) {
+this.firstName = firstName;
+this.lastName = lastName;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Admin Portal</title>
-</head>
+// Add a method to the Person prototype
+Person.prototype.getFullName = function () {
+return this.firstName + ' ' + this.lastName;
+};
 
-<body>
-    <div class="container">
+// Create instances of the Person object
+const person1 = new Person('John', 'Doe');
+const person2 = new Person('Alice', 'Smith');
 
-        <div id="signinPage" class="page active">
-            <h1>Sign In</h1>
-            <form onsubmit="event.preventDefault(); signIn();">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-
-                <button type="submit">Sign In</button>
-            </form>
-        </div>
-
-    </div>
-
-    <script src="script.js"></script>
-</body>
-
-</html>
+// Access and display the full names using the getter method
+console.log(person1.getFullName()); // Output: John Doe
+console.log(person2.getFullName()); // Output: Alice Smith
