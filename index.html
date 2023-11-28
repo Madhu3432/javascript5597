@@ -1,18 +1,22 @@
-// Define a constructor function for creating Person objects
-function Person(firstName, lastName) {
-this.firstName = firstName;
-this.lastName = lastName;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-// Add a method to the Person prototype
-Person.prototype.getFullName = function () {
-return this.firstName + ' ' + this.lastName;
-};
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Number Data Types Demo</title>
+</head>
 
-// Create instances of the Person object
-const person1 = new Person('John', 'Doe');
-const person2 = new Person('Alice', 'Smith');
+<body>
 
-// Access and display the full names using the getter method
-console.log(person1.getFullName()); // Output: John Doe
-console.log(person2.getFullName()); // Output: Alice Smith
+    <div class="number-container">
+        <p>Integer: <span class="integer">42</span></p>
+        <p>Float: <span class="float">3.14</span></p>
+        <p>Negative Integer: <span class="negative">-7</span></p>
+        <p>Scientific Notation: <span class="scientific">5.67e3</span></p>
+    </div>
+
+</body>
+
+</html>
