@@ -7,27 +7,37 @@ body {
     margin: 0;
 }
 
-.number-container {
-    text-align: left;
+.calculator {
+    text-align: center;
     border: 1px solid #ddd;
     padding: 20px;
     border-radius: 5px;
 }
 
-.integer {
-    color: blue;
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+.operations {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#result {
+    font-size: 18px;
     font-weight: bold;
-}
-
-.float {
     color: green;
-    font-style: italic;
-}
-
-.negative {
-    color: red;
-}
-
-.scientific {
-    color: purple;
 }

@@ -5,18 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Number Data Types Demo</title>
+    <title>Arithmetic Operations Demo</title>
 </head>
 
 <body>
 
-    <div class="number-container">
-        <p>Integer: <span class="integer">42</span></p>
-        <p>Float: <span class="float">3.14</span></p>
-        <p>Negative Integer: <span class="negative">-7</span></p>
-        <p>Scientific Notation: <span class="scientific">5.67e3</span></p>
+    <div class="calculator">
+        <label for="num1">Number 1:</label>
+        <input type="number" id="num1">
+
+        <label for="num2">Number 2:</label>
+        <input type="number" id="num2">
+
+        <div class="operations">
+            <button onclick="performOperation('add')">Addition (+)</button>
+            <button onclick="performOperation('subtract')">Subtraction (-)</button>
+            <button onclick="performOperation('multiply')">Multiplication (*)</button>
+            <button onclick="performOperation('divide')">Division (/)</button>
+        </div>
+
+        <div id="result"></div>
     </div>
 
+    <script src="script1.js"></script>
 </body>
 
 </html>
