@@ -1,26 +1,16 @@
-function performOperation(operation) {
-    var num1 = parseFloat(document.getElementById("num1").value);
-    var num2 = parseFloat(document.getElementById("num2").value);
+function createConcatPrint() {
+    var inputString = document.getElementById("inputString").value;
     var resultElement = document.getElementById("result");
 
-    switch (operation) {
-        case 'add':
-            resultElement.textContent = "Result: " + (num1 + num2);
-            break;
-        case 'subtract':
-            resultElement.textContent = "Result: " + (num1 - num2);
-            break;
-        case 'multiply':
-            resultElement.textContent = "Result: " + (num1 * num2);
-            break;
-        case 'divide':
-            if (num2 !== 0) {
-                resultElement.textContent = "Result: " + (num1 / num2);
-            } else {
-                resultElement.textContent = "Cannot divide by zero!";
-            }
-            break;
-        default:
-            resultElement.textContent = "Invalid operation";
-    }
+    // Create and print the original string
+    var originalString = "Original String: " + inputString;
+
+    // Concatenate a new string
+    var concatenatedString = "Concatenated String: " + inputString + " - Hello World!";
+
+    // Access substring
+    var substring = "Substring: " + inputString.slice(0, 5);
+
+    // Display results
+    resultElement.innerHTML = originalString + "<br>" + concatenatedString + "<br>" + substring;
 }

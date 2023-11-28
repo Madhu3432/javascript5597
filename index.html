@@ -5,24 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Arithmetic Operations Demo</title>
+    <title>String Operations Demo</title>
 </head>
 
 <body>
 
-    <div class="calculator">
-        <label for="num1">Number 1:</label>
-        <input type="number" id="num1">
+    <div class="string-container">
+        <label for="inputString">Enter a String:</label>
+        <input type="text" id="inputString" placeholder="Type a string...">
 
-        <label for="num2">Number 2:</label>
-        <input type="number" id="num2">
-
-        <div class="operations">
-            <button onclick="performOperation('add')">Addition (+)</button>
-            <button onclick="performOperation('subtract')">Subtraction (-)</button>
-            <button onclick="performOperation('multiply')">Multiplication (*)</button>
-            <button onclick="performOperation('divide')">Division (/)</button>
-        </div>
+        <button onclick="createConcatPrint()">Create, Concatenate, and Print</button>
 
         <div id="result"></div>
     </div>

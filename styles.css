@@ -7,7 +7,7 @@ body {
     margin: 0;
 }
 
-.calculator {
+.string-container {
     text-align: center;
     border: 1px solid #ddd;
     padding: 20px;
@@ -25,12 +25,6 @@ input {
     margin-bottom: 15px;
 }
 
-.operations {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 15px;
-}
-
 button {
     padding: 10px;
     cursor: pointer;
@@ -39,5 +33,6 @@ button {
 #result {
     font-size: 18px;
     font-weight: bold;
-    color: green;
+    color: blue;
+    margin-top: 15px;
 }
