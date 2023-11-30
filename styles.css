@@ -7,32 +7,12 @@ body {
     margin: 0;
 }
 
-.string-container {
+.date-container {
     text-align: center;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 5px;
 }
 
-label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-}
-
-button {
-    padding: 10px;
-    cursor: pointer;
-}
-
-#result {
+#currentDate {
     font-size: 18px;
     font-weight: bold;
-    color: blue;
-    margin-top: 15px;
+    color: green;
 }
