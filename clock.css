@@ -1,0 +1,10 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+#dateDisplay {
+    font-size: 18px;
+    margin-top: 20px;
+}
