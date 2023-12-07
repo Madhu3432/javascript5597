@@ -1,18 +1,28 @@
-// Define a constructor function for creating Person objects
-function Person(firstName, lastName) {
-this.firstName = firstName;
-this.lastName = lastName;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-// Add a method to the Person prototype
-Person.prototype.getFullName = function () {
-return this.firstName + ' ' + this.lastName;
-};
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles_lists.css">
+    <title>List Operations Demo</title>
+</head>
 
-// Create instances of the Person object
-const person1 = new Person('John', 'Doe');
-const person2 = new Person('Alice', 'Smith');
+<body>
 
-// Access and display the full names using the getter method
-console.log(person1.getFullName()); // Output: John Doe
-console.log(person2.getFullName()); // Output: Alice Smith
+    <div class="list-container">
+        <h2>Shopping List</h2>
+        <ul id="shoppingList">
+            <li>Apples</li>
+            <li>Bananas</li>
+            <li>Milk</li>
+        </ul>
+
+        <button onclick="addItem()">Add Item</button>
+        <button onclick="removeItem()">Remove Last Item</button>
+    </div>
+
+    <script src="script_lists.js"></script>
+</body>
+
+</html>
