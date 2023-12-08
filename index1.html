@@ -1,66 +1,311 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles1.css">
+    <script src="script3.js"></script>
     <title>Admin Portal</title>
 </head>
 
 <body>
+
     <div class="container">
-        >
-        <div class="header">
-            <i class="fas fa-user-circle"></i>
-            <h1>Welcome to Admin Portal</h1>
+        <h1>Your Web Page</h1>
+
+        <p>This is a simple web page with some components.</p>
+
+        <div class="divider"></div>
+
+        <div class="grid">
+            <div class="icon">A</div>
+            <div class="icon">B</div>
+            <div class="icon">C</div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Breadcrumb -->
+        <ul class="breadcrumb">
+            <li>Home</li>
+            <li>Category</li>
+            <li>Subcategory</li>
+            <li>Current Page</li>
+        </ul>
+
+        <!-- Dropdown -->
+        <div class="dropdown">
+            <button>Dropdown</button>
+            <div class="dropdown-content">
+                <a href="#">Option 1</a>
+                <a href="#">Option 2</a>
+                <a href="#">Option 3</a>
+            </div>
         </div>
 
-        <div class="menu">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Settings</a></li>
+        <!-- Menu -->
+        <ul class="menu">
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+
+        <!-- Pagination -->
+        <ul class="pagination">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>Next</li>
+        </ul>
+
+        <!-- Steps -->
+        <ul class="steps">
+            <li>Step 1</li>
+            <li>Step 2</li>
+            <li>Step 3</li>
+        </ul>
+
+        <!-- Autocomplete -->
+        <div class="autocomplete">
+            <input type="text" class="autocomplete-input" placeholder="Type something">
+            <div class="autocomplete-list">
+                <div class="autocomplete-list-item">Option 1</div>
+                <div class="autocomplete-list-item">Option 2</div>
+                <div class="autocomplete-list-item">Option 3</div>
+            </div>
+        </div>
+
+        <!-- Cascade -->
+        <div class="cascade">
+            <label for="cascade-select">Select:</label>
+            <select id="cascade-select">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <!-- Checkbox -->
+        <div class="checkbox-container">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox">Checkbox</label>
+        </div>
+
+        <!-- Date Picker -->
+        <div class="date-picker">
+            <label for="date">Date:</label>
+            <input type="date" id="date">
+        </div>
+
+        <!-- Form -->
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email">
+
+            <label for="message">Message:</label>
+            <textarea id="message" placeholder="Type your message"></textarea>
+
+            <label>Gender:</label>
+            <div class="radio-container">
+                <input type="radio" id="male" name="gender">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender">
+                <label for="female">Female</label>
+            </div>
+
+            <!-- Slider -->
+            <div class="slider-container">
+                <label for="slider">Slider:</label>
+                <input type="range" id="slider" min="1" max="100">
+            </div>
+
+            <!-- Switch -->
+            <div class="switch-container">
+                <label for="switch">Switch:</label>
+                <label class="switch">
+                    <input type="checkbox" id="switch">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+
+    <div class="container">
+
+        <!-- Time Picker -->
+        <div class="time-picker">
+            <label for="time">Select Time:</label>
+            <input type="time" id="time">
+        </div>
+
+        <!-- Transfer (You may need a JavaScript library for this) -->
+        <div class="transfer">
+            <ul class="transfer-list">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+            <ul class="transfer-list">
+                <!-- Selected items will be moved here -->
             </ul>
         </div>
 
-        <hr class="divider">
+        <!-- Tree Select (You may need a JavaScript library for this) -->
+        <div class="tree-select">
+            <!-- Tree select content goes here -->
+        </div>
 
-        <div class="content">
-            <h2>Main Content</h2>
+        <!-- Upload (You may need a JavaScript library for this) -->
+        <div class="upload">
+            <label for="file">Upload File:</label>
+            <input type="file" id="file">
+        </div>
 
-            <div class="grid">
-                <div class="grid-item">Item 1</div>
-                <div class="grid-item">Item 2</div>
-                <div class="grid-item">Item 3</div>
-            </div>
+        <!-- Avatar -->
+        <div class="avatar">
+            <img src="avatar.jpg" alt="Avatar">
+        </div>
 
-            <div class="breadcrumb">
-                <a href="#">Home</a> > <a href="#">Category</a> > Current Page
-            </div>
+        <!-- Badge -->
+        <div class="badge">New</div>
 
-            <div class="dropdown">
-                <button class="dropbtn">Select Option</button>
-                <div class="dropdown-content">
-                    <a href="#">Option 1</a>
-                    <a href="#">Option 2</a>
-                    <a href="#">Option 3</a>
-                </div>
-            </div>
+        <!-- Calendar -->
+        <div class="calendar">
+            <!-- Calendar content goes here -->
+        </div>
 
-            <div class="pagination">
-                <a href="#" class="active">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-            </div>
+        <!-- Card -->
+        <div class="card">
+            <h2>Card Title</h2>
+            <p>This is a card with some content.</p>
+        </div>
 
-            <div class="steps">
-                <div class="step">Step 1</div>
-                <div class="step">Step 2</div>
-                <div class="step">Step 3</div>
+        <!-- Carousel (You may need a JavaScript library for this) -->
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">Slide 1</div>
+                <div class="carousel-item">Slide 2</div>
+                <div class="carousel-item">Slide 3</div>
             </div>
         </div>
-    </div>
-</body>
 
-</html>
+    </div>
+
+    <div class="container">
+
+        <!-- Collapse -->
+        <button onclick="toggleCollapse()">Toggle Collapse</button>
+        <div id="collapseContent" class="collapse">
+            <p>This content can be collapsed or expanded.</p>
+        </div>
+
+        <!-- Descriptions -->
+        <div class="descriptions">
+            <div class="description">Name: John Doe</div>
+            <div class="description">Age: 25</div>
+            <div class="description">Location: City</div>
+        </div>
+
+        <!-- Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>25</td>
+                    <td>City</td>
+                </tr>
+                <tr>
+                    <td>Jane Doe</td>
+                    <td>30</td>
+                    <td>Suburb</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <div class="tab" onclick="showTabContent('tab1')">Tab 1</div>
+            <div class="tab" onclick="showTabContent('tab2')">Tab 2</div>
+        </div>
+        <div id="tab1" class="tab-content">
+            <p>Content for Tab 1.</p>
+        </div>
+        <div id="tab2" class="tab-content">
+            <p>Content for Tab 2.</p>
+        </div>
+
+        <!-- Tag -->
+        <div class="tag">Tag 1</div>
+        <div class="tag">Tag 2</div>
+        <div class="tag">Tag 3</div>
+
+        <!-- Timeline -->
+        <ul class="timeline">
+            <li class="timeline-item">Event 1</li>
+            <li class="timeline-item">Event 2</li>
+            <li class="timeline-item">Event 3</li>
+        </ul>
+
+        <!-- Tooltip -->
+        <div class="tooltip">
+            Hover over me
+            <div class="tooltip-text">This is a tooltip</div>
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <!-- Tour (You may need a JavaScript library for this) -->
+        <div class="tour-step">
+            <p>Step 1: This is a tour step.</p>
+        </div>
+
+        <!-- Notification -->
+        <div class="notification">
+            This is a notification message.
+        </div>
+
+        <!-- Progress -->
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 75%;">75%</div>
+        </div>
+
+        <!-- Result -->
+        <div class="result">
+            Success!
+        </div>
+
+        <!-- Spin -->
+        <div class="spin"></div>
+
+        <!-- Reports -->
+        <div class="report">
+            <h3>Report 1</h3>
+            <p>This is the content of report 1.</p>
+        </div>
+
+        <div class="report">
+            <h3>Report 2</h3>
+            <p>This is the content of report 2.</p>
+        </div>
+
+    </div>
+
+</body>

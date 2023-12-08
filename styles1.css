@@ -1,158 +1,680 @@
-body,
-h1,
-h2,
-ul,
-li,
-p {
-    margin: 0;
-    padding: 0;
-}
+ /* Reset some default styles */
+ body,
+ h1,
+ p {
+     margin: 0;
+     padding: 0;
+ }
 
-body {
+ /* Container for the layout */
+ .container {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 20px;
+ }
 
-    background-image: url('HANUMAN.webp');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 0;
-}
+ /* Typography styles */
+ h1 {
+     font-size: 2em;
+     margin-bottom: 20px;
+ }
 
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    /* background-color: #8f1717; */
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(151, 245, 151, 0.662);
-}
+ p {
+     font-size: 1.2em;
+     margin-bottom: 10px;
+ }
 
-.header {
-    display: flex;
-    align-items: center;
-}
+ /* Divider styles */
+ .divider {
+     border-top: 2px solid #333;
+     margin: 20px 0;
+ }
 
-.header i {
-    font-size: 24px;
-    margin-right: 10px;
-}
+ /* Grid styles */
+ .grid {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 20px;
+ }
 
-.header h1 {
-    color: rgb(167, 176, 180);
-    font-size: 28px;
-    font-weight: bold;
-}
+ /* Icon styles */
+ .icon {
+     width: 50px;
+     height: 50px;
+     background-color: #333;
+     color: #fff;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 50%;
+     font-size: 1.5em;
+ }
 
+ /* Container for the layout */
+ .container {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 20px;
+ }
 
-.menu {
-    margin-top: 20px;
-}
+ /* Breadcrumb styles */
+ .breadcrumb {
+     list-style: none;
+     display: flex;
+     margin-bottom: 20px;
+ }
 
-.menu ul {
-    list-style-type: none;
-}
+ .breadcrumb li {
+     margin-right: 10px;
+ }
 
-.menu ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
+ /* Dropdown styles */
+ .dropdown {
+     position: relative;
+     display: inline-block;
+ }
 
-.menu a {
-    text-decoration: none;
-    color: #e91616;
-    font-weight: bold;
-}
+ .dropdown-content {
+     display: none;
+     position: absolute;
+     background-color: #f9f9f9;
+     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+     padding: 10px;
+     z-index: 1;
+ }
 
-.divider {
-    margin: 20px 0;
-    border: 1px solid #ccc;
-}
+ .dropdown:hover .dropdown-content {
+     display: block;
+ }
 
-.content h2 {
-    color: #f4aeae;
-}
+ /* Menu styles */
+ .menu {
+     list-style: none;
+     display: flex;
+ }
 
-.content {
-    margin-top: 20px;
-}
+ .menu li {
+     margin-right: 10px;
+ }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
+ /* Pagination styles */
+ .pagination {
+     list-style: none;
+     display: flex;
+     margin-top: 20px;
+ }
 
-.grid-item {
-    background-color: #de3333;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-}
+ .pagination li {
+     margin-right: 10px;
+     cursor: pointer;
+ }
 
-.breadcrumb {
-    margin: 20px 0;
-    color: #14dc85;
-}
+ /* Steps styles */
+ .steps {
+     list-style: none;
+     display: flex;
+     margin-top: 20px;
+ }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-    margin-right: 20px;
-}
+ .steps li {
+     margin-right: 10px;
+     font-weight: bold;
+ }
 
-.dropbtn {
-    background-color: #0b80f4;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+ /* Autocomplete styles */
+ .autocomplete {
+     position: relative;
+     display: inline-block;
+ }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0 8px 16px rgba(237, 10, 10, 0.2);
-    z-index: 1;
-}
+ .autocomplete-input {
+     padding: 10px;
+ }
 
-.dropdown-content a {
-    color: #333;
-    padding: 10px;
-    display: block;
-    text-decoration: none;
-}
+ .autocomplete-list {
+     display: none;
+     position: absolute;
+     background-color: #f9f9f9;
+     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+     padding: 10px;
+     z-index: 1;
+ }
 
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
+ .autocomplete-list-item {
+     cursor: pointer;
+     padding: 5px;
+ }
 
-.pagination {
-    margin: 20px 0;
-}
+ .autocomplete:hover .autocomplete-list {
+     display: block;
+ }
 
-.pagination a {
-    color: #007bff;
-    padding: 8px;
-    text-decoration: none;
-}
+ /* Cascade styles */
+ .cascade {
+     margin-top: 20px;
+ }
 
-.pagination a.active {
-    background-color: #007bff;
-    color: #f8e3e3;
-}
+ .cascade select {
+     padding: 10px;
+ }
 
-.steps {
-    display: flex;
-    margin-top: 20px;
-}
+ /* Reset some default styles */
+ body,
+ h1,
+ p,
+ form,
+ input,
+ label,
+ select,
+ textarea {
+     margin: 0;
+     padding: 0;
+ }
 
-.step {
-    flex: 1;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    margin-right: 10px;
-}
+ /* Container for the layout */
+ .container {
+     max-width: 600px;
+     margin: 0 auto;
+     padding: 20px;
+ }
+
+ /* Form styles */
+ form {
+     display: flex;
+     flex-direction: column;
+ }
+
+ label {
+     margin-bottom: 8px;
+     font-weight: bold;
+ }
+
+ input,
+ select,
+ textarea {
+     margin-bottom: 16px;
+     padding: 8px;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+ }
+
+ /* Checkbox styles */
+ .checkbox-container {
+     display: flex;
+     align-items: center;
+ }
+
+ /* Date picker styles */
+ .date-picker {
+     margin-bottom: 16px;
+ }
+
+ /* Radio button styles */
+ .radio-container {
+     display: flex;
+     align-items: center;
+ }
+
+ /* Slider styles */
+ .slider-container {
+     margin-bottom: 16px;
+ }
+
+ /* Switch styles */
+ .switch-container {
+     display: flex;
+     align-items: center;
+ }
+
+ .switch {
+     position: relative;
+     display: inline-block;
+     width: 40px;
+     height: 20px;
+ }
+
+ .switch input {
+     opacity: 0;
+     width: 0;
+     height: 0;
+ }
+
+ .slider {
+     position: absolute;
+     cursor: pointer;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: #ccc;
+     transition: .4s;
+     border-radius: 20px;
+ }
+
+ .slider:before {
+     position: absolute;
+     content: "";
+     height: 16px;
+     width: 16px;
+     left: 2px;
+     bottom: 2px;
+     background-color: white;
+     transition: .4s;
+     border-radius: 50%;
+ }
+
+ input:checked+.slider {
+     background-color: #2196F3;
+ }
+
+ input:checked+.slider:before {
+     transform: translateX(20px);
+ }
+
+ /* Reset some default styles */
+ body,
+ h1,
+ p,
+ form,
+ input,
+ label,
+ select,
+ textarea {
+     margin: 0;
+     padding: 0;
+ }
+
+ /* Container for the layout */
+ .container {
+     max-width: 600px;
+     margin: 0 auto;
+     padding: 20px;
+ }
+
+ /* Form styles */
+ form {
+     display: flex;
+     flex-direction: column;
+ }
+
+ label {
+     margin-bottom: 8px;
+     font-weight: bold;
+ }
+
+ input,
+ select,
+ textarea {
+     margin-bottom: 16px;
+     padding: 8px;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+ }
+
+ /* Checkbox styles */
+ .checkbox-container {
+     display: flex;
+     align-items: center;
+ }
+
+ /* Date picker styles */
+ .date-picker {
+     margin-bottom: 16px;
+ }
+
+ /* Radio button styles */
+ .radio-container {
+     display: flex;
+     align-items: center;
+ }
+
+ /* Slider styles */
+ .slider-container {
+     margin-bottom: 16px;
+ }
+
+ /* Switch styles */
+ .switch-container {
+     display: flex;
+     align-items: center;
+ }
+
+ .switch {
+     position: relative;
+     display: inline-block;
+     width: 40px;
+     height: 20px;
+ }
+
+ .switch input {
+     opacity: 0;
+     width: 0;
+     height: 0;
+ }
+
+ .slider {
+     position: absolute;
+     cursor: pointer;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: #ccc;
+     transition: .4s;
+     border-radius: 20px;
+ }
+
+ .slider:before {
+     position: absolute;
+     content: "";
+     height: 16px;
+     width: 16px;
+     left: 2px;
+     bottom: 2px;
+     background-color: white;
+     transition: .4s;
+     border-radius: 50%;
+ }
+
+ input:checked+.slider {
+     background-color: #2196F3;
+ }
+
+ input:checked+.slider:before {
+     transform: translateX(20px);
+ }
+
+ /* Container for the layout */
+ .container {
+     max-width: 800px;
+     margin: 0 auto;
+     padding: 20px;
+ }
+
+ /* Time picker styles (You may need a JavaScript library for this) */
+ .time-picker {
+     margin-bottom: 16px;
+ }
+
+ /* Transfer styles (You may need a JavaScript library for this) */
+ .transfer {
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 16px;
+ }
+
+ .transfer-list {
+     width: 45%;
+     list-style: none;
+     border: 1px solid #ccc;
+     padding: 10px;
+ }
+
+ /* Tree select styles (You may need a JavaScript library for this) */
+ .tree-select {
+     margin-bottom: 16px;
+ }
+
+ /* Upload styles (You may need a JavaScript library for this) */
+ .upload {
+     margin-bottom: 16px;
+ }
+
+ /* Avatar styles */
+ .avatar {
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     overflow: hidden;
+     margin-right: 10px;
+ }
+
+ /* Badge styles */
+ .badge {
+     padding: 5px 10px;
+     background-color: #007bff;
+     color: #fff;
+     border-radius: 4px;
+     margin-right: 10px;
+ }
+
+ /* Calendar styles */
+ .calendar {
+     margin-bottom: 16px;
+ }
+
+ /* Card styles */
+ .card {
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     padding: 10px;
+     margin-bottom: 16px;
+ }
+
+ /* Carousel styles (You may need a JavaScript library for this) */
+ .carousel {
+     overflow: hidden;
+     width: 100%;
+ }
+
+ .carousel-inner {
+     display: flex;
+     transition: transform 0.5s ease-in-out;
+ }
+
+ .carousel-item {
+     min-width: 100%;
+     box-sizing: border-box;
+ }
+
+ /* Container for the layout */
+ .container {
+     max-width: 800px;
+     margin: 0 auto;
+     padding: 20px;
+ }
+
+ /* Collapse styles */
+ .collapse {
+     display: none;
+ }
+
+ /* Descriptions styles */
+ .descriptions {
+     display: flex;
+     flex-wrap: wrap;
+     margin-bottom: 20px;
+ }
+
+ .description {
+     margin-right: 20px;
+     margin-bottom: 20px;
+ }
+
+ /* Table styles */
+ table {
+     width: 100%;
+     border-collapse: collapse;
+     margin-bottom: 20px;
+ }
+
+ th,
+ td {
+     border: 1px solid #ddd;
+     padding: 8px;
+     text-align: left;
+ }
+
+ th {
+     background-color: #f2f2f2;
+ }
+
+ /* Tabs styles */
+ .tabs {
+     display: flex;
+     margin-bottom: 20px;
+ }
+
+ .tab {
+     margin-right: 10px;
+     cursor: pointer;
+ }
+
+ .tab-content {
+     display: none;
+ }
+
+ /* Tag styles */
+ .tag {
+     padding: 5px 10px;
+     background-color: #007bff;
+     color: #fff;
+     border-radius: 4px;
+     margin-right: 10px;
+     margin-bottom: 10px;
+     display: inline-block;
+ }
+
+ /* Timeline styles */
+ .timeline {
+     list-style: none;
+     padding: 0;
+     margin-bottom: 20px;
+ }
+
+ .timeline-item {
+     position: relative;
+     padding-left: 20px;
+     margin-bottom: 20px;
+ }
+
+ .timeline-item:before {
+     content: '';
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 10px;
+     height: 10px;
+     background-color: #007bff;
+     border-radius: 50%;
+ }
+
+ /* Tooltip styles */
+ .tooltip {
+     position: relative;
+     display: inline-block;
+     cursor: pointer;
+ }
+
+ .tooltip-text {
+     visibility: hidden;
+     width: 120px;
+     background-color: #333;
+     color: #fff;
+     text-align: center;
+     padding: 5px;
+     border-radius: 4px;
+     position: absolute;
+     z-index: 1;
+     bottom: 125%;
+     left: 50%;
+     margin-left: -60px;
+     opacity: 0;
+     transition: opacity 0.3s;
+ }
+
+ .tooltip:hover .tooltip-text {
+     visibility: visible;
+     opacity: 1;
+ }
+
+ /* Container for the layout */
+ .container {
+     max-width: 800px;
+     margin: 0 auto;
+     padding: 20px;
+ }
+
+ /* Tour styles (You may need a JavaScript library for this) */
+ .tour-step {
+     position: relative;
+     margin-bottom: 20px;
+ }
+
+ .tour-step::before {
+     content: '';
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 20px;
+     height: 20px;
+     background-color: #007bff;
+     border-radius: 50%;
+ }
+
+ /* Notification styles */
+ .notification {
+     padding: 10px;
+     background-color: #f8d7da;
+     color: #721c24;
+     border: 1px solid #f5c6cb;
+     border-radius: 4px;
+     margin-bottom: 20px;
+ }
+
+ /* Progress styles */
+ .progress-container {
+     width: 100%;
+     background-color: #f8f9fa;
+     border: 1px solid #dee2e6;
+     border-radius: 4px;
+     overflow: hidden;
+     margin-bottom: 20px;
+ }
+
+ .progress-bar {
+     width: 50%;
+     height: 20px;
+     background-color: #007bff;
+     text-align: center;
+     line-height: 20px;
+     color: #fff;
+ }
+
+ /* Result styles */
+ .result {
+     text-align: center;
+     font-size: 24px;
+     font-weight: bold;
+     margin-bottom: 20px;
+ }
+
+ /* Spin styles */
+ .spin {
+     display: inline-block;
+     width: 50px;
+     height: 50px;
+     border: 4px solid rgba(0, 0, 0, 0.1);
+     border-top: 4px solid #007bff;
+     border-radius: 50%;
+     animation: spin 1s linear infinite;
+ }
+
+ @keyframes spin {
+     0% {
+         transform: rotate(0deg);
+     }
+
+     100% {
+         transform: rotate(360deg);
+     }
+ }
+
+ /* Reports styles */
+ .report {
+     margin-bottom: 20px;
+     border: 1px solid #ccc;
+     padding: 10px;
+     border-radius: 4px;
+ }
