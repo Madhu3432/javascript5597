@@ -1,32 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Admin Portal</title>
+    <title>Basic DOM Manipulation</title>
 </head>
 
 <body>
-    <div class="container">
+    <div id="myDiv">Hello, World!</div>
 
-        <div id="signinPage" class="page active">
-            <h1>Sign In</h1>
-            <form onsubmit="event.preventDefault(); signIn();">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
 
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+    <button id="myButton">Click me</button>
 
-                <button type="submit">Sign In</button>
-            </form>
-        </div>
+    <script>
+        // // Access the element with id "myDiv"
+        // var myElement = document.getElementById("myDiv");
+        // console.log(myElement.textContent);
+        // var nikil = document.createElement("p");
+        // nikil.textContent = "Hamanth";
+        // var yaswanth = document.getElementById("myDiv");
+        // yaswanth.appendChild(nikil);
+        // yaswanth.removeChild(nikil)
 
-    </div>
 
-    <script src="script.js"></script>
+
+
+        var button = document.getElementById("myButton");
+        button.style.color = "red";
+        button.style.backgroundColor = "black"
+
+
+        button.addEventListener("click", function () {
+            alert("Button clicked!");
+        });
+
+
+
+
+
+    </script>
 </body>
 
 </html>
